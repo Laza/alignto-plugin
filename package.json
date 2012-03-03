@@ -1,0 +1,39 @@
+{
+	"name": "alignTo",
+	"version": "1.0",
+	"title": "jQuery alignTo plugin",
+	"author": {
+		"name": "Laszlo Molnar",
+		"url": "https://github.com/Laza"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "MIT-LICENSE.txt"
+		},
+		{
+			"type": "GPLv2",
+			"url": "GPL-LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": "1.7"
+	},
+	"description": "Aligns an absolutely positioned element to another.",
+	"keywords": [
+		"align",
+		"elements"
+	],
+	"homepage": "https://github.com/Laza/jquery-alignto",
+	"maintainers": [
+		{
+			"name": "Laszlo Molnar",
+			"url": "https://github.com/Laza"
+		}
+	],
+	"files": [
+		"alignto.js",
+		"alignto.min.js",
+		"sample.html"
+	]
+}

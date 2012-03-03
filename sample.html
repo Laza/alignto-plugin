@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>alignTo plugin sample</title>
+<style>
+body {
+	font:12px/1.231 Arial,Helvetica,sans-serif;
+}
+.tooltip {
+	position:absolute;
+	background-color:#fea;
+	padding:0.5em 1em;
+	font-size:1.2em;
+}
+.targets span {
+	display:inline-block;
+	padding:1em;
+	margin:2em;
+	border:1px solid #ccc;
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="tooltip">1</div>
+<div class="tooltip">2</div>
+<div class="tooltip">3</div>
+<div class="targets">
+	<span>(default)</span>
+	<span>this left / middle<br>to right / middle</span>
+	<span>this right / top<br>to center / bottom<br>gap = 0</span>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1"></script>
+<script src="alignto.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.tooltip:first').alignTo('.targets > span:first');
+		$('.tooltip:nth(1)').alignTo('.targets > span:nth(1)', {
+		    posX: ALIGN_LEFT, 
+			posY: ALIGN_MIDDLE,
+    		toX: ALIGN_RIGHT,
+    		toY: ALIGN_MIDDLE
+		});
+		$('.tooltip:last').alignTo('.targets > span:last', {
+		    posX: ALIGN_RIGHT,
+			posY: ALIGN_TOP,
+    		toX: ALIGN_CENTER, 
+    		toY: ALIGN_BOTTOM,
+			gap: 0
+		});
+	});
+</script>
+</body>
+</html>
